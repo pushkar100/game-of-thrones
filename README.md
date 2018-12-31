@@ -4,7 +4,7 @@ A React & Redux based app for listing Game of Thrones' books, characters, and ho
 
 ## Visual Demo
 
-![Visual Demo Gif](https://dummyimage.com/600x400/000/fff)
+![Visual Demo Gif](https://i.ibb.co/RCyhfbm/got.gif)
 
 ## Features of the app:
 
@@ -42,4 +42,4 @@ A React & Redux based app for listing Game of Thrones' books, characters, and ho
 
 ## App Link:
 
-[Link to Demo](http://www.pushakrdk.com/game-of-thrones)
+[Link to Demo](http://www.pushakrdk.com/)
