@@ -1,68 +1,42 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Discover & Learn Game of Thrones 
 
-## Available Scripts
+A React & Redux based app for listing Game of Thrones' books, characters, and houses! Provides a clean UI and easy navigation for GOT fans to view this 3-way documentation surrounding the show & book. 
 
-In the project directory, you can run:
+## Visual Demo
 
-### `npm start`
+![Visual Demo Gif](https://dummyimage.com/600x400/000/fff)
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Features of the app:
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+- Shows a list of paginated books, characters, and houses. Further requests are made to fetch more content for every new page.
+- Memoization of pages so that network requests for previously visited pages are not made but shown a cached version
+- Redux is used with React in order to maintain a central `store` using the `react-redux` dependency
+- Asynchronous API calls are made to `https://www.anapioficeandfire.com/api` to fetch the data. For this purpose, the `redux-thunk` middlware is used for the `redux` store
+- In order to make the requests themselves, `axios` package is being used (instead of `fetch`)
+- Routing is used to navigate to a specific book with an `id`. Similar routes for a character and a house exist
+- The UI has been implemented with the help of [`spectre`](https://picturepan2.github.io/spectre/) CSS library
+- Handles user interactions such as viewing a book, character, or house
 
-### `npm test`
+## Routes:
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `/` - Home page display a few books/characters/houses
+- `/book/:id` - Details of a specific book
+- `/character/:id` - Details of specific character
+- `houses/:id` - Details of a specific house
 
-### `npm run build`
+## Components (Custom):
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `App`: The main component of our app
+- `Description`: A simple function component used to introduce this App and Game of Thrones to the viewer
+- `Books`: Responsible for managing the widget displaying the list of books
+- `Characters`: Responsible for managing the widget displaying the list of characters
+- `Houses`: Responsible for managing the widget displaying the list of houses
+- `Loader`: A component acting as a placeholder widget for another component that waits to load its actual content
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+## Authors:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **Pushkar DK**  [@pushkar100](https://github.com/pushkar100)
 
-### `npm run eject`
+## App Link:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+[Link to Demo](http://www.pushakrdk.com/game-of-thrones)
