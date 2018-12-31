@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { fetchBooks } from '../actions';
 import Loader from './Loader';
 
@@ -31,14 +32,18 @@ class Books extends React.Component {
 		if(!this.props.books.length) {
 			return <Loader topic="Books" operation="fetch data" />;
 		}
-
+		
+		console.log(this.getBooks());
+		
 		return this.getBooks().map(({ url, name, authors, released, numberOfPages }) => (
 			<div key={url || 0} className="book col-3">
 				<div>
-					<h4>{name}</h4>
-					<p className="author">{authors && authors[0]}</p>
-					<p className="date">{new Date(released).toLocaleDateString()}</p>
-					<p className="pages">{numberOfPages} pages</p>
+					<Link to={`/books/${url.split('/').pop()}`}>
+						<h4>{name}</h4>
+						<p className="author">{authors && authors[0]}</p>
+						<p className="date">{new Date(released).toLocaleDateString()}</p>
+						<p className="pages">{numberOfPages} pages</p>
+					</Link>
 				</div>
 			</div>
 		));

@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { fetchCharacters } from '../actions';
 import Loader from './Loader';
 
@@ -35,10 +36,12 @@ class Characters extends React.Component {
 		return this.getCharacters().map(({ url, name, aliases, gender, culture, playedBy }) => (
 			<div key={url} className="character col-3">
 				<div>
-					<h4>{name || aliases[0] || 'Unknown'}</h4>
-					<p className="gender">{gender}</p>
-					<p className="culture">{culture}</p>
-					<p className="playedby">{playedBy || 'Unknown'}</p>
+					<Link to={`/characters/${url.split('/').pop()}`}>
+						<h4>{name || aliases[0] || 'Unknown'}</h4>
+						<p className="gender">{gender}</p>
+						<p className="culture">{culture}</p>
+						<p className="playedby">{playedBy || 'Unknown'}</p>
+					</Link>
 				</div>
 			</div>
 		));

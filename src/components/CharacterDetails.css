@@ -1,0 +1,26 @@
+.char-details {
+	padding: 30px 50px;
+	text-align: center;
+}
+.char-details > * {
+	margin: 0 auto;
+}
+.char-details .name {
+	line-height: 1.5;
+	margin-bottom: 10px;
+}
+.char-details .sub-header {
+	margin-bottom: 10px;
+	color: #999;
+}
+.char-details .table {
+	margin-bottom: 20px;
+	width: 500px
+}
+.char-details .table a + a {
+	display: inline-block;
+	margin: 0 0 5px 5px;
+}
+.char-details .bold {
+	font-weight: 600;
+}

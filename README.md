@@ -20,8 +20,8 @@ A React & Redux based app for listing Game of Thrones' books, characters, and ho
 ## Routes:
 
 - `/` - Home page display a few books/characters/houses
-- `/book/:id` - Details of a specific book
-- `/character/:id` - Details of specific character
+- `/books/:id` - Details of a specific book
+- `/characters/:id` - Details of specific character
 - `houses/:id` - Details of a specific house
 
 ## Components (Custom):
@@ -32,6 +32,9 @@ A React & Redux based app for listing Game of Thrones' books, characters, and ho
 - `Characters`: Responsible for managing the widget displaying the list of characters
 - `Houses`: Responsible for managing the widget displaying the list of houses
 - `Loader`: A component acting as a placeholder widget for another component that waits to load its actual content
+- `BookDetails`: Information on a book
+- `CharacterDetails`: Information on a character
+- `HouseDetails`: Information on a book
 
 ## Authors:
 

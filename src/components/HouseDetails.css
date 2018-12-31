@@ -1,0 +1,26 @@
+.house-details {
+	padding: 30px 50px;
+	text-align: center;
+}
+.house-details > * {
+	margin: 0 auto;
+}
+.house-details .name {
+	line-height: 1.5;
+	margin-bottom: 10px;
+}
+.house-details .sub-header {
+	margin-bottom: 10px;
+	color: #999;
+}
+.house-details .table {
+	margin-bottom: 20px;
+	width: 500px
+}
+.house-details .table a + a {
+	display: inline-block;
+	margin: 0 0 5px 5px;
+}
+.house-details .bold {
+	font-weight: 600;
+}

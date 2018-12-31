@@ -56,6 +56,14 @@
 .house .region {
    font-size: 1em;
 }
+.book a,
+.character a,
+.house a {
+   color: #3b4351;
+   text-decoration: none;
+   text-transform: none;
+   display: block
+}
 .book .date,
 .character .culture,
 .house .words
@@ -84,4 +92,8 @@
 .pagination {
    margin-top: 20px;
    padding: 0 20px;
+}
+.error-route.error-route {
+   min-height: 500px;
+   padding: 150px 0;
 }

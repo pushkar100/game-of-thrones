@@ -1,0 +1,26 @@
+.book-details {
+	padding: 30px 50px;
+	text-align: center;
+}
+.book-details > * {
+	margin: 0 auto;
+}
+.book-details .name {
+	line-height: 1.5;
+	margin-bottom: 10px;
+}
+.book-details .sub-header {
+	margin-bottom: 10px;
+	color: #999;
+}
+.book-details .table {
+	margin-bottom: 20px;
+	width: 500px
+}
+.book-details .table a + a {
+	display: inline-block;
+	margin: 0 0 5px 5px;
+}
+.book-details .bold {
+	font-weight: 600;
+}

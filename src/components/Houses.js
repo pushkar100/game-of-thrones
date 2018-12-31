@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { fetchHouses } from '../actions';
 import Loader from './Loader';
 
@@ -35,9 +36,11 @@ class Houses extends React.Component {
 		return this.getHouses().map(({ url, name, region, words }) => (
 			<div key={url} className="house col-3">
 				<div>
-					<h4>{name}</h4>
-					<p className="region">{region || 'unknown'}</p>
-					<p className="words">{words || 'unknown'}</p>
+					<Link to={`/houses/${url.split('/').pop()}`}>
+						<h4>{name}</h4>
+						<p className="region">{region || 'unknown'}</p>
+						<p className="words">{words || 'unknown'}</p>
+					</Link>
 				</div>
 			</div>
 		));
