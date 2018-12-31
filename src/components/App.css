@@ -1,0 +1,87 @@
+.container {
+   width: 95%;
+   margin: 2.5%;
+}
+.container h2 {
+   color: #777;
+}
+.left {
+   padding: 0 20px;
+}
+.left .description {
+   margin: 30px 0;
+   padding: 0 10px;
+}
+.left > img {
+   margin-top: 10px;
+}
+.right {
+   border-left: 1px solid #dfe1e8;
+}
+.right > div {
+   border-top: 1px solid #dfe1e8;
+   padding: 10px;
+}
+.book,
+.house,
+.character {
+   padding: 10px;
+   text-align: center;
+}
+.book > div,
+.character > div,
+.house > div {
+   border: 1px solid #dfe1e8;
+   border-radius: 5px;
+   padding: 10px;
+   cursor: pointer;
+   overflow: hidden;
+}
+.book > div {
+   height: 150px;
+}
+.character > div {
+   height: 140px;
+}
+.house > div {
+   height: 160px;
+}
+.book p,
+.character p,
+.house p {
+   margin-bottom: 0;
+}
+.book .author,
+.character .gender,
+.house .region {
+   font-size: 1em;
+}
+.book .date,
+.character .culture,
+.house .words
+{
+   font-size: 0.8em;
+}
+.book .pages,
+.character .playedby {
+   font-size: 0.8em;
+}
+.left-align {
+   text-align: left;
+}
+.right-align {
+   text-align: right;
+}
+.center {
+   text-align: center;
+}
+.center > * + * {
+   margin-left: 10px;
+}
+.accordion-header {
+   cursor: pointer;
+}
+.pagination {
+   margin-top: 20px;
+   padding: 0 20px;
+}
